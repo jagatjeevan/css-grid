@@ -4,40 +4,33 @@
 	<meta charset="UTF-8">
 	<title>CSS Grid Layout</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
 </head>
 <body>
-  <dl class="container">
-    <dt>Why Learning Css Grid ?</dt>
-    <dd>
-      - Makes the HTML a lot simpler for arraning the layouts. <br>
-      - CSS is a lot more simpler / less for layout related code. <br>
-      - Skip framework and their work-arounds. Less files to download and harness browser support.<br>
-    </dd>
-
-    <dt>Browser Support</dt>
-    <dd>Major browser are now supporting. <a href="https://caniuse.com/#feat=css-grid">Details</a> </dd>
-  </dl>
-
-  <h1 class="container">Demo of CSS Grid</h1>
-	<div class="wrapper container">
-    <div class="item item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem repudiandae rerum, veritatis vero dolore ducimus vel, eum? Voluptatem totam non enim ex itaque libero, beatae reiciendis quasi, perspiciatis, tenetur fuga?</div>
-    <div class="item item2">item2</div>
-    <div class="item item3">item3</div>
-    <div class="item item4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum a non, illo fuga rerum, at quos accusamus, atque deleniti distinctio labore assumenda repellendus ipsum omnis nostrum doloremque suscipit nulla placeat.</div>
-    <div class="item item5">item5</div>
-    <div class="item item6">item6</div>
-    <div class="item item7">item7</div>
-    <div class="item item8">item8</div>
-    <div class="item item9">item9</div>
-    <div class="item item10">item10</div>
-    <div class="item item11">item11</div>
-    <div class="item item12">item12</div>
+  
+  <h1 class="title">Layout using css grid</h1>
+  <div class="page-layout">
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="content">Content</div>
+    <div class="footer">footer</div>
   </div>
 
-  <h1 class="container">Resources</h1>
-  <div class="container">
-    <a href="https://scrimba.com/p/pWqLHa/cg9PpTb">Scrimba.com</a><br>
-    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Css Tricks</a>
+  <h1 class="title">Layout using Bootstrap 4</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm header">Header</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 menu">Menu</div>
+      <div class="col-sm-9 content">Content</div>
+    </div>
+    <div class="row">
+      <div class="col-sm footer">
+         Footer
+      </div>
+    </div>
   </div>
 </body>
 </html>

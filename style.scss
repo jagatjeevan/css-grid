@@ -1,69 +1,30 @@
-/* General styles */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-  & h1 {
-    margin-top: 50px;
-  }
-}
+@import "basic";
 
-h1:first-of-type {
-  margin-top: 0;
-}
-
-.wrapper {
-  background: #efefef;
-  > div {
-    background: #dedede;
-    padding: 20px;
-    text-align: justify;
-  }
-}
-
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-dl {
-  dt {
-    font-weight: bold;
-    &:before {
-      content: "►";
-      margin-right: 10px;
-    }
-  }
-  dd {
-    margin-bottom: 20px;
-    padding: 10px 0;
-    border-bottom: 1px dotted #333;
-  }
-}
-
-/* Css grid layout styles */
-.wrapper {
+.page-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: minmax(150px, auto);
-  grid-gap: 3px;
-  grid-auto-flow: dense; // manages the space.
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px;
+  grid-auto-rows: 40px;
 }
 
-.item1, 
-.item4 {
-  grid-column: span 2;
-  @media screen and (max-width: 658px) {
-    grid-column: 1;
+.header {
+  grid-column: span 12;
+}
+
+.menu {
+  grid-column: span 3;
+  @media screen and (max-width: 575px) {
+    grid-column: span 12;
   }
 }
 
-.item6,
-.item2 {
-  grid-row: span 2;
-  @media screen and (max-width: 658px) {
-    grid-row: span 1;
+.content {
+  grid-column: span 9;
+  @media screen and (max-width: 575px) {
+    grid-column: span 12;
   }
 }
 
+.footer {
+  grid-column: span 12;
+}
