@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Getting started: create first layout</title>
+  <style>
+    /* basic stying */
+    .item {
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-bottom: 1px;
+      margin-left: 1px;
+    }
+    /* actual styling */
+    .container {
+      display: grid;
+      grid-template-rows: 40px 40px 80px 80px;
+      grid-template-columns: 130px 230px 330px; /* 33.33% 33.33% 33.33%; repeat(3, 1fr); */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Child element 1</div>
+    <div class="item">Child element 2</div>
+    <div class="item">Child element 3</div>
+    <div class="item">Child element 4</div>
+    <div class="item">Child element 5</div>
+    <div class="item">Child element 6</div>
+    <div class="item">Child element 7</div>
+    <div class="item">Child element 8</div>
+    <div class="item">Child element 9</div>
+    <div class="item">Child element 10</div>
+    <div class="item">Child element 11</div>
+    <div class="item">Child element 12</div>
+  </div>
+</body>
+</html>
