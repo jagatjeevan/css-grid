@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Positioning the items</title>
+  <style>
+    /* basic styling */
+    .container {
+      margin-bottom: 20px;
+    }
+    .header {
+      background-color: #96ceb4;	
+    }
+    .menu {
+      background-color: #ff6f69;
+    }
+    .content {
+      background-color: #ffcc5c;
+    }
+    .footer {
+      background-color: #88d8b0;
+    }
+    /* styling starts */
+    .container {
+      display: grid;
+      grid-template-columns: 330px auto;
+      grid-auto-rows: 80px;
+      grid-gap: 3px;
+    }
+    .first-grid .header,
+    .first-grid .footer {
+      grid-column-start: 1;
+      grid-column-end: 3; /* span 2; -1 */
+    }
+    .second-grid .menu {
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .second-grid .footer,
+    .second-grid .content {
+      grid-column: 1 / span 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container first-grid">
+    <header class="header">Header</header>
+    <aside class="menu">Menu Items</aside>
+    <article class="content">Content of the page</article>
+    <footer class="footer">Here goes the footer</footer>
+  </div>
+
+  <div class="container second-grid">
+    <header class="header">Header</header>
+    <aside class="menu">Menu Items</aside>
+    <article class="content">Content of the page</article>
+    <footer class="footer">Here goes the footer</footer>
+  </div>
+</body>
+</html>
