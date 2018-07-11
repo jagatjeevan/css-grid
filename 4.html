@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Define your grid system</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 3px;
+      margin-bottom: 3px
+    }
+    .col-2 {
+      grid-column: 1 / span 2;
+    }
+    .col-3 {
+      grid-column: 1 / span 3;
+    }
+    .col-4 {
+      grid-column-end: span 4;
+    }
+    .push-1 {
+      grid-column-start: 2;
+    }
+    .items {
+      padding: 20px;
+      background: #dedede;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="items">1 column</div>
+  </div>
+  <div class="container">
+    <div class="items col-2">2 columns</div>
+  </div>
+  <div class="container">
+    <div class="items col-3">3 columns</div>
+  </div>
+  <div class="container">
+    <div class="items col-4 push-1">4 columns starts from second element</div>
+  </div>
+
+  <pre>
+    Sass code to generate 12 grid columns.
+    <code>
+    @for $i from 1 through 12 { 
+      .col-#{$i} { 
+        grid-column-start: 1; 
+        grid-colimn-end: #{$i}; 
+      }
+    }
+    </code>
+    <code>
+    @for $i from 1 through 11 {
+      .push-#{$i} {
+        grid-column-start: #{$i};
+      }
+    }
+    </code>
+  </pre>
+</body>
+</html>
