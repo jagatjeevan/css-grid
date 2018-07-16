@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Grid template areas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .header {
+      background-color: #96ceb4;	
+    }
+
+    .menu {
+      background-color: #ff6f69;
+    }
+
+    .content {
+      background-color: #ffcc5c;
+    }
+
+    .footer {
+      background-color: #88d8b0;
+    }
+    .container1 > * {
+      padding: 10px;
+    }
+    .container1 {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas: 
+      "h h h h h h h h h h h h"
+      "m m m c c c c c c c c c"
+      "f f f f f f f f f f f f";
+    }
+    .header {
+      grid-area: h;
+    }
+    .menu {
+      grid-area: m;
+    }
+    .content {
+      grid-area: c;
+    }
+    .footer {
+      grid-area: f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container1">
+    <header class="header">header</header>
+    <aside class="menu">aside</aside>
+    <article class="content">article</article>
+    <footer class="footer">footer</footer>
+  </div>
+</body>
+</html>
