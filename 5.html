@@ -24,6 +24,15 @@
     .container1 > * {
       padding: 10px;
     }
+    .container2 {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 50px;
+      grid-template-areas: 
+      "m m m h h h h h h h h h"
+      "m m m c c c c c c c c c"
+      "m m m f f f f f f f f f";
+    }
     .container1 {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -48,6 +57,12 @@
 </head>
 <body>
   <div class="container1">
+    <header class="header">header</header>
+    <aside class="menu">aside</aside>
+    <article class="content">article</article>
+    <footer class="footer">footer</footer>
+  </div>
+  <div class="container2">
     <header class="header">header</header>
     <aside class="menu">aside</aside>
     <article class="content">article</article>
